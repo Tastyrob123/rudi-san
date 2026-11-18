@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="de" class="warten">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Instagram-Feed · RUDI SAN</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../marke/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:'Archivo';src:url('../../schrift/archivo.woff2') format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:block}
+:root{--nacht:#121110;--gold:#c8a46a;--hell:#efe8db;--creme:#f2ece1;--e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html.warten body{visibility:hidden}
+html,body{background:var(--nacht);color:#fff;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:var(--nacht) url(tapete.svg) 50% 0/150px auto;min-height:100vh}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+.zurueck{position:fixed;z-index:50;top:22px;left:24px;display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--gold)}
+.stage{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;gap:clamp(40px,7vw,110px);padding:72px 24px 56px}
+.aside{max-width:440px}
+.aside .lg{width:220px;height:auto;display:block;margin-bottom:40px}
+.aside .kap{font-size:13px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.aside h1{font-weight:300;font-stretch:125%;text-transform:uppercase;font-size:clamp(2.4rem,4vw,3.6rem);line-height:1.04;margin-bottom:24px}
+.aside p{font-size:1.06rem;line-height:1.7;color:rgba(255,255,255,.82);font-weight:300}
+.aside p+p{margin-top:14px}
+.kn{position:relative;display:inline-flex;align-items:center;gap:16px;height:54px;padding:0 8px 0 26px;border-radius:999px;margin-top:32px;font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--nacht);
+  background:linear-gradient(180deg,#fbf6ec,#e8dcc6 50%,#cdb48a);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -2px 0 rgba(156,124,79,.4),0 16px 26px -14px rgba(0,0,0,.7);transition:transform .5s var(--e2)}
+.kn:hover{transform:translateY(-2px)}
+.kn i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#3a3630,#121110);color:var(--gold)}
+.kn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.4}
+.devwrap{position:relative;flex:none}
+.device{width:402px;height:874px;border-radius:62px;background:#000;padding:12px;position:relative;box-shadow:0 0 0 2px #2b2926,0 0 0 9px #0a0908,0 0 0 10px rgba(200,164,106,.35),0 60px 90px -30px rgba(0,0,0,.85)}
+.screen{width:100%;height:100%;border-radius:50px;overflow:hidden;background:#000;position:relative;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+.island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:124px;height:36px;border-radius:20px;background:#000;z-index:30}
+.status{height:54px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 30px 8px 36px;font-size:16px;font-weight:600;flex:none;background:#000}
+.scroll{flex:1;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;overscroll-behavior:contain}
+.scroll::-webkit-scrollbar{display:none}
+.top{display:flex;align-items:center;justify-content:space-between;padding:6px 16px 10px;position:sticky;top:0;background:#000;z-index:20;font-size:20px;font-weight:700}
+.head{display:flex;align-items:center;gap:22px;padding:4px 16px 10px}
+.avr{width:86px;height:86px;border-radius:50%;padding:2px;background:conic-gradient(#c8a46a,#efe2c8,#7a6040,#c8a46a);flex:none}
+.avr img{width:100%;height:100%;border-radius:50%;border:3px solid #000;display:block;object-fit:cover}
+.nums{flex:1}
+.nums b{display:block;font-size:17px;font-weight:700}
+.nums span{font-size:13px;color:#e8e8e8}
+.bio{padding:0 16px;font-size:14px;line-height:1.4}
+.bio .n{font-weight:600}.bio .cat{color:#a8a8a8}
+.btns{display:flex;gap:6px;padding:12px 16px 4px}
+.btns div{flex:1;background:#262626;border-radius:9px;text-align:center;font-size:14px;font-weight:600;padding:8px 0}
+.btns div.p{background:#6e5a3c}
+.hl{display:flex;gap:14px;padding:14px 16px 12px;overflow-x:auto;scrollbar-width:none}
+.hl::-webkit-scrollbar{display:none}
+.h{text-align:center;font-size:13px;flex:none;width:72px;line-height:1.25}
+.h i{display:block;width:66px;height:66px;border-radius:50%;border:1px solid #3a3a3a;padding:3px;margin:0 auto 6px}
+.h i img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.tabs{display:flex;border-bottom:1px solid #262626;position:sticky;top:48px;background:#000;z-index:19}
+.tabs div{flex:1;display:flex;justify-content:center;padding:11px 0;color:#8e8e8e}
+.tabs div.on{color:#fff;box-shadow:inset 0 -1.5px 0 #fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.t{aspect-ratio:4/5;overflow:hidden;background:#1b1a18;display:block;width:100%}
+.t img{width:100%;height:100%;object-fit:cover;display:block}
+.nav{height:82px;flex:none;display:flex;justify-content:space-around;align-items:flex-start;padding-top:12px;border-top:1px solid #1d1d1d;background:#000}
+.nav .me{width:26px;height:26px;border-radius:50%;border:2px solid #fff;overflow:hidden}
+.nav .me img{width:100%;height:100%;object-fit:cover;display:block}
+.post{position:absolute;inset:0;background:#000;z-index:40;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s .35s}
+.post.on{opacity:1;visibility:visible;transition:opacity .35s ease}
+.post .bar{height:54px;flex:none}
+.post .ph{display:flex;align-items:center;gap:10px;padding:8px 14px}
+.post .ph .zu{font-size:26px;line-height:1;padding:2px 10px 6px 0}
+.post .ph .mini{width:32px;height:32px;border-radius:50%;overflow:hidden;flex:none}
+.post .ph .mini img{width:100%;height:100%;object-fit:cover;display:block}
+.post .ph b{font-size:14px}
+.post .body{flex:1;overflow-y:auto;scrollbar-width:none}
+.post .img{width:100%;aspect-ratio:4/5;display:block;object-fit:cover;background:#1b1a18}
+.post .act{display:flex;gap:16px;padding:10px 14px 4px}
+.post .cap{padding:6px 14px 18px;font-size:14px;line-height:1.42}
+.post .cap b{font-weight:600;margin-right:6px}
+.aside>*,.devwrap{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform 1.3s var(--e1)}.aside>*.da,.devwrap.da{opacity:1;transform:none}.aside>*:nth-child(2){transition-delay:.06s}.aside>*:nth-child(3){transition-delay:.12s}.aside>*:nth-child(4){transition-delay:.18s}.aside>*:nth-child(5){transition-delay:.24s}
+
+.los .aside>*:nth-child(2){animation-delay:.08s}.los .aside>*:nth-child(3){animation-delay:.16s}.los .aside>*:nth-child(4){animation-delay:.24s}.los .aside>*:nth-child(5){animation-delay:.32s}
+@keyframes auf{to{opacity:1;transform:none}}
+@media (max-width:900px){.stage{flex-direction:column;padding-top:84px}.devwrap{order:-1}.aside{text-align:center}.aside .lg{margin:0 auto 30px}}
+@media (max-width:440px){.device{width:calc(100vw - 32px);height:calc((100vw - 32px) * 2.17);border-radius:48px;padding:10px}.screen{border-radius:38px}}
+@media (prefers-reduced-motion:reduce){.aside>*,.devwrap{opacity:1;transform:none;animation:none!important;transition:none}}
+</style>
+<noscript><style>html.warten body{visibility:visible}.aside>*,.devwrap{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="zurueck" href="../../werkbank/index.html#feed">‹ Zur Werkbank</a>
+<div class="stage">
+  <div class="aside">
+    <img class="lg" src="../../markenbuch/dateien/rudi-san-kombi-fuer-dunkel.svg" width="544" height="310" alt="RUDI SAN Fine Dining">
+    <p class="kap">Instagram · @rudi__san</p>
+    <h1>So kann dein Profil aussehen.</h1>
+    <p>27 Beiträge aus deinen eigenen Fotos und den Vorlagen, dazu die sechs Highlight-Cover und das Profilbild mit dem Zweig.</p>
+    <p>Tipp auf ein Bild, dann öffnet sich der Beitrag mit seiner Bildzeile.</p>
+    <a class="kn" href="../online/index.html"><span>Alle Vorlagen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></i></a>
+  </div>
+  <div class="devwrap" data-a>
+    <div class="device" id="device"><div class="screen">
+      <div class="island"></div>
+      <div class="status"><span>9:41</span><span>●●●</span></div>
+      <div class="scroll" id="scroll">
+        <div class="top"><span>rudi__san</span><span style="font-size:22px">≡</span></div>
+        <div class="head">
+          <div class="avr"><img src="bilder/avatar.webp" alt="Profilbild RUDI SAN" decoding="sync"></div>
+          <div class="nums"><b>27</b><span>Beiträge</span></div>
+        </div>
+        <div class="bio"><div class="n">Rudolf Napieraj · RUDI SAN</div><div class="cat">Private Chef & Eventkoch</div>
+          <div>Moderne europäische Küche und Fine Dining</div><div>Private Dining · Exklusive Events · Business- und Firmenevents</div><div>16 Jahre Berufserfahrung · international</div></div>
+        <div class="btns"><div class="p">Folgen</div><div>Nachricht</div><div>WhatsApp</div></div>
+        <div class="hl"><div class="h"><i><img src="bilder/h-private.webp" alt="" decoding="sync"></i>Private Dining</div><div class="h"><i><img src="bilder/h-events.webp" alt="" decoding="sync"></i>Events</div><div class="h"><i><img src="bilder/h-business.webp" alt="" decoding="sync"></i>Business</div><div class="h"><i><img src="bilder/h-kueche.webp" alt="" decoding="sync"></i>Küche</div><div class="h"><i><img src="bilder/h-stationen.webp" alt="" decoding="sync"></i>Stationen</div><div class="h"><i><img src="bilder/h-kontakt.webp" alt="" decoding="sync"></i>Kontakt</div></div>
+        <div class="tabs"><div class="on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 8h18M8 3l3 5M14 3l3 5M10 12v6l5-3z"/></svg></div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M7 18c1-3 3-4 5-4s4 1 5 4"/></svg></div></div>
+        <div class="grid" id="grid"><button class="t" type="button" data-i="0" aria-label="Beitrag öffnen"><img src="bilder/k-00.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="1" aria-label="Beitrag öffnen"><img src="bilder/k-01.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="2" aria-label="Beitrag öffnen"><img src="bilder/k-02.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="3" aria-label="Beitrag öffnen"><img src="bilder/k-03.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="4" aria-label="Beitrag öffnen"><img src="bilder/k-04.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="5" aria-label="Beitrag öffnen"><img src="bilder/k-05.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="6" aria-label="Beitrag öffnen"><img src="bilder/k-06.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="7" aria-label="Beitrag öffnen"><img src="bilder/k-07.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="8" aria-label="Beitrag öffnen"><img src="bilder/k-08.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="9" aria-label="Beitrag öffnen"><img src="bilder/k-09.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="10" aria-label="Beitrag öffnen"><img src="bilder/k-10.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="11" aria-label="Beitrag öffnen"><img src="bilder/k-11.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="12" aria-label="Beitrag öffnen"><img src="bilder/k-12.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="13" aria-label="Beitrag öffnen"><img src="bilder/k-13.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="14" aria-label="Beitrag öffnen"><img src="bilder/k-14.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="15" aria-label="Beitrag öffnen"><img src="bilder/k-15.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="16" aria-label="Beitrag öffnen"><img src="bilder/k-16.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="17" aria-label="Beitrag öffnen"><img src="bilder/k-17.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="18" aria-label="Beitrag öffnen"><img src="bilder/k-18.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="19" aria-label="Beitrag öffnen"><img src="bilder/k-19.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="20" aria-label="Beitrag öffnen"><img src="bilder/k-20.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="21" aria-label="Beitrag öffnen"><img src="bilder/k-21.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="22" aria-label="Beitrag öffnen"><img src="bilder/k-22.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="23" aria-label="Beitrag öffnen"><img src="bilder/k-23.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="24" aria-label="Beitrag öffnen"><img src="bilder/k-24.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="25" aria-label="Beitrag öffnen"><img src="bilder/k-25.webp" alt="" width="360" height="450" decoding="sync"></button><button class="t" type="button" data-i="26" aria-label="Beitrag öffnen"><img src="bilder/k-26.webp" alt="" width="360" height="450" decoding="sync"></button></div>
+      </div>
+      <div class="nav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 8h18M8 3l3 5M14 3l3 5M10 12v6l5-3z"/></svg><div class="me"><img src="bilder/avatar.webp" alt=""></div></div>
+      <div class="post" id="post"><div class="bar"></div>
+        <div class="ph"><button type="button" class="zu" aria-label="Zurück zum Raster">‹</button><span class="mini"><img src="bilder/avatar.webp" alt=""></span><b>rudi__san</b></div>
+        <div class="body"><img class="img" id="pimg" alt=""><div class="act"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.2-6.4A8 8 0 0 1 20 12l1 6-5-2"/></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M21 3L3 10l7 3 3 7z"/></svg></div><p class="cap"><b>rudi__san</b><span id="pcap"></span></p></div>
+      </div>
+    </div></div>
+  </div>
+</div>
+<script>
+(function(){var P=[{"k": "bilder/k-00.webp", "g": "bilder/g-00.webp", "s": "Moderne europäische Küche und Fine Dining."}, {"k": "bilder/k-01.webp", "g": "bilder/g-01.webp", "s": "Private Dining, exklusive Events, Business- und Firmenevents. Anfragen per WhatsApp oder Mail."}, {"k": "bilder/k-02.webp", "g": "bilder/g-02.webp", "s": "Am Pass."}, {"k": "bilder/k-03.webp", "g": "bilder/g-03.webp", "s": "Fine Dining."}, {"k": "bilder/k-04.webp", "g": "bilder/g-04.webp", "s": "Exklusive Events."}, {"k": "bilder/k-05.webp", "g": "bilder/g-05.webp", "s": "Im Mittelpunkt: Produktqualität, Geschmack und handwerkliche Präzision."}, {"k": "bilder/k-06.webp", "g": "bilder/g-06.webp", "s": "16 Jahre Berufserfahrung: Formel 1, FC Bayern München, Heilbronn, Tegernsee, Berlin."}, {"k": "bilder/k-07.webp", "g": "bilder/g-07.webp", "s": "Rudolf Napieraj, Private Chef und Eventkoch."}, {"k": "bilder/k-08.webp", "g": "bilder/g-08.webp", "s": "Fine Dining."}, {"k": "bilder/k-09.webp", "g": "bilder/g-09.webp", "s": "Ein Gang, angerichtet für die ganze Tafel."}, {"k": "bilder/k-10.webp", "g": "bilder/g-10.webp", "s": "Private Dining."}, {"k": "bilder/k-11.webp", "g": "bilder/g-11.webp", "s": "Ansprechende Präsentation."}, {"k": "bilder/k-12.webp", "g": "bilder/g-12.webp", "s": "Exklusive Events, international."}, {"k": "bilder/k-13.webp", "g": "bilder/g-13.webp", "s": "Handwerkliche Präzision."}, {"k": "bilder/k-14.webp", "g": "bilder/g-14.webp", "s": "Moderne europäische Küche."}, {"k": "bilder/k-15.webp", "g": "bilder/g-15.webp", "s": "Fine Dining."}, {"k": "bilder/k-16.webp", "g": "bilder/g-16.webp", "s": "Fine Dining."}, {"k": "bilder/k-17.webp", "g": "bilder/g-17.webp", "s": "In der Küche."}, {"k": "bilder/k-18.webp", "g": "bilder/g-18.webp", "s": "Private Dining."}, {"k": "bilder/k-19.webp", "g": "bilder/g-19.webp", "s": "Fine Dining."}, {"k": "bilder/k-20.webp", "g": "bilder/g-20.webp", "s": "Business- und Firmenevents."}, {"k": "bilder/k-21.webp", "g": "bilder/g-21.webp", "s": "Am Tisch."}, {"k": "bilder/k-22.webp", "g": "bilder/g-22.webp", "s": "Fine Dining."}, {"k": "bilder/k-23.webp", "g": "bilder/g-23.webp", "s": "Ein Gang für alle Gäste."}, {"k": "bilder/k-24.webp", "g": "bilder/g-24.webp", "s": "In der Küche."}, {"k": "bilder/k-25.webp", "g": "bilder/g-25.webp", "s": "Moderne europäische Küche."}, {"k": "bilder/k-26.webp", "g": "bilder/g-26.webp", "s": "Rudolf Napieraj, Private Chef und Eventkoch."}];var d=document.documentElement,f=0;function zeig(){if(f)return;f=1;d.classList.remove('warten');d.classList.add('los')}
+var w=[].slice.call(document.querySelectorAll('img[decoding=sync]')).map(function(i){return i.complete?0:new Promise(function(r){i.onload=i.onerror=r})});
+if(document.fonts)w.push(document.fonts.ready);Promise.all(w).then(zeig);setTimeout(zeig,2600);
+var post=document.getElementById('post'),img=document.getElementById('pimg'),cap=document.getElementById('pcap');
+document.getElementById('grid').addEventListener('click',function(ev){var t=ev.target.closest('.t');if(!t)return;var p=P[+t.dataset.i];img.src=p.g;cap.textContent=p.s;post.classList.add('on')});
+post.querySelector('.zu').addEventListener('click',function(){post.classList.remove('on')});
+var zz=[].slice.call(document.querySelectorAll('.aside>*,.devwrap'));if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){io.unobserve(x.target);x.target.classList.add('da')}})},{rootMargin:'0px 0px -6% 0px'});var w2=setInterval(function(){if(f){clearInterval(w2);zz.forEach(function(x){io.observe(x)})}},50);}else zz.forEach(function(x){x.classList.add('da')});
+addEventListener('pageshow',function(ev){if(ev.persisted)zz.forEach(function(x){x.classList.add('da')})});})();
+</script>
+<script src="../besuch.js?v=1794976032" defer></script>
+</body>
+</html>

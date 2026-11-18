@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="de" class="wartet">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Markenbuch · RUDI SAN</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../marke/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../schrift/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Archivo';src:url('../schrift/archivo.woff2') format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:block}
+:root{--nacht:#121110;--anthrazit:#1b1a18;--platte:#24221e;--creme:#f2ece1;--creme-tief:#e8dfcf;--gold:#c8a46a;--gold-tief:#9c7c4f;--hell:#efe8db;--dunkel:#1a1816;--grau:#6b6358;--rand:clamp(16px,4vw,64px);--e1:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--nacht)}
+html.wartet body{visibility:hidden}
+body{margin:0;background:var(--creme);color:var(--dunkel);font:300 17px/1.65 'Archivo',sans-serif;font-synthesis:none;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,figure,dl,dd{margin:0}
+.in{max-width:1440px;margin:0 auto;padding:0 var(--rand)}
+.kw{font-weight:500;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-tief)}
+.d .kw{color:var(--gold)}
+.ti{font-weight:300;font-stretch:125%;text-transform:uppercase;line-height:1.02;letter-spacing:.01em}
+.d{background:var(--nacht);color:var(--hell)}
+.leiste{position:absolute;z-index:3;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:22px var(--rand)}
+.leiste img{height:40px;width:auto}
+.leiste a.zur{font-weight:500;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.at{position:relative;padding:150px 0 90px;background:var(--nacht) url(tapete.svg) 50% 0/150px auto}
+.at__in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(30px,5vw,90px);align-items:center}
+.at h1{font-size:clamp(56px,8.4vw,128px);color:var(--hell)}
+.at h1 span{display:block;color:var(--gold)}
+.at p.lead{margin-top:32px;font-size:clamp(18px,1.5vw,21px);max-width:34em;color:rgba(239,232,219,.84)}
+.at ul{list-style:none;padding:0;margin:34px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.at li a{display:block;padding:10px 18px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(200,164,106,.4);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.at li a:hover{background:rgba(200,164,106,.12)}
+.at__b{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.at__b figure{border-radius:14px;overflow:hidden}
+.at__b figure:first-child{grid-row:span 2}
+.at__b img{width:100%;height:100%;object-fit:cover}
+.ab{padding:clamp(80px,9vw,140px) 0}
+.kopf{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,80px);align-items:end;margin-bottom:clamp(36px,4vw,60px)}
+.kopf h2{font-size:clamp(44px,6vw,96px);margin-top:16px}
+.kopf p{font-size:clamp(17px,1.3vw,19px);max-width:36em;color:var(--grau)}
+.d .kopf p{color:rgba(239,232,219,.8)}
+.tafeln{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tf{display:flex;flex-direction:column;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 30px 50px -40px rgba(26,24,22,.6),0 0 0 1px rgba(26,24,22,.06)}
+.tf__f{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;padding:8% 12%}
+.tf .lg{width:min(380px,74%);height:auto;display:block}
+.tf .lg--z{width:auto;height:clamp(110px,13vw,190px)}
+.tf .lg--w{width:min(420px,80%)}
+.tf figcaption{flex:1;display:flex;flex-direction:column;gap:6px;padding:22px 26px 24px;border-top:1px solid rgba(26,24,22,.08)}
+.tf figcaption b{font-weight:400;font-stretch:125%;text-transform:uppercase;font-size:20px;letter-spacing:.02em}
+.tf figcaption span{color:var(--grau);font-size:16px}
+.dls{display:flex;gap:8px;margin-top:auto;padding-top:12px}
+.dl{padding:8px 14px;border-radius:999px;background:var(--nacht);color:var(--gold);font-weight:500;font-size:13px;letter-spacing:.18em}
+.dl:hover{background:var(--platte)}
+.schutz{position:relative;width:min(300px,60%);padding:9%;outline:1px dashed rgba(156,124,79,.6)}
+.schutz__r{position:relative;outline:1px solid rgba(156,124,79,.25)}
+.sz{position:absolute;background:rgba(200,164,106,.16)}
+.sz--o,.sz--u{left:0;right:0;height:9%}.sz--o{top:0}.sz--u{bottom:0}
+.sz--l,.sz--r{top:0;bottom:0;width:9%}.sz--l{left:0}.sz--r{right:0}
+.klein{display:flex;align-items:flex-end;justify-content:center;gap:clamp(20px,3vw,44px);flex-wrap:wrap}
+.klein>div{display:flex;flex-direction:column;align-items:center;gap:14px}.klein img{width:100%;height:auto;display:block}.schutz__r img{width:100%;height:auto;display:block}
+.klein b{font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-tief);text-align:center}
+.farben{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.fa{background:var(--anthrazit);border-radius:18px;overflow:hidden;box-shadow:0 0 0 1px rgba(200,164,106,.16)}
+.fa__f{aspect-ratio:16/8;display:flex;align-items:flex-end;padding:22px 24px;box-shadow:inset 0 -1px 0 rgba(200,164,106,.22)}
+.fa__f b{font-weight:400;font-stretch:125%;text-transform:uppercase;font-size:26px}
+.fa dl{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;padding:20px 24px 0;font-size:16px}
+.fa dt{font-weight:500;font-size:13px;letter-spacing:.2em;color:var(--gold);padding-top:3px}
+.fa p{padding:10px 24px 24px;color:rgba(239,232,219,.78);font-size:16px}
+.quelle{margin-top:28px;font-size:16px;color:rgba(239,232,219,.7)}
+.schrift{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sp{background:#fff;border-radius:18px;padding:30px 30px 28px;box-shadow:0 0 0 1px rgba(26,24,22,.06);display:flex;flex-direction:column;gap:14px}
+.sp--gross{grid-column:1/-1;background:var(--nacht);color:var(--hell);flex-direction:row;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.sp--gross .muster{font-weight:300;font-stretch:125%;font-size:clamp(56px,8vw,128px);line-height:1;letter-spacing:.04em}
+.sp--gross .abc{flex:1 1 320px;min-width:0;max-width:24em;overflow-wrap:anywhere;font-weight:300;font-stretch:125%;font-size:20px;letter-spacing:.08em;color:var(--gold)}
+.sp .name{font-weight:500;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-tief)}
+.sp .probe1{font-weight:300;font-stretch:125%;text-transform:uppercase;font-size:34px;line-height:1.05}
+.sp .probe2{font-weight:500;font-size:16px;letter-spacing:.3em;text-transform:uppercase}
+.sp .probe3{font-size:17px;line-height:1.65}
+.sp .wert{margin-top:auto;font-size:15px;color:var(--grau);border-top:1px solid rgba(26,24,22,.1);padding-top:12px}
+.bs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.bs__g{display:flex;flex-direction:column;gap:12px}
+.bs__g .kw{padding:4px 2px}
+.bs__g figure{border-radius:12px;overflow:hidden}
+.bs__g img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.anw{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.an{display:flex;flex-direction:column;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 0 0 1px rgba(26,24,22,.06),0 30px 50px -40px rgba(26,24,22,.6)}
+.an__b{position:relative;aspect-ratio:4/3;background:#8a8378}
+.an__b img{position:absolute;left:9%;top:9%;width:82%;height:82%;object-fit:contain;filter:drop-shadow(0 12px 16px rgba(20,18,15,.35))}
+.an__t{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:20px 24px 22px;align-items:center}
+.an__t b{font-weight:400;font-stretch:125%;text-transform:uppercase;font-size:20px}
+.an__t span{grid-column:1;color:var(--grau);font-size:16px}
+.an__t i{grid-column:2;grid-row:1/3;width:38px;height:38px;border-radius:50%;background:var(--nacht);color:var(--gold);display:grid;place-items:center;transition:transform .4s var(--e1)}
+.an:hover .an__t i{transform:translateX(3px)}
+.an__t svg{width:14px;height:14px}
+.fu{padding:64px 0 56px}
+.fu .in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.fu .in>img{height:72px;width:auto}
+.fu p{color:rgba(239,232,219,.7);font-size:15px}
+.fu a.zur{display:inline-flex;align-items:center;gap:14px;padding:7px 8px 7px 22px;border-radius:999px;background:linear-gradient(180deg,#fbf6ec,#d9c39a);color:var(--nacht);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.fu a.zur i{width:34px;height:34px;border-radius:50%;background:var(--nacht);color:var(--gold);display:grid;place-items:center}
+.fu a.zur svg{width:13px;height:13px}
+[data-a]{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform 1.2s var(--e1)}
+[data-a].da{opacity:1;transform:none}
+@media (max-width:1000px){.at__in,.kopf{grid-template-columns:1fr}.farben,.schrift,.anw{grid-template-columns:repeat(2,minmax(0,1fr))}.bs{grid-template-columns:repeat(2,minmax(0,1fr))}.sp--gross{grid-column:1/-1}}
+@media (max-width:640px){.tafeln,.farben,.schrift,.anw{grid-template-columns:1fr}.at{padding-top:110px}.leiste img{height:32px}.sp--gross .abc{font-size:16px}}
+@media (prefers-reduced-motion:reduce){[data-a]{opacity:1;transform:none;transition:none}}
+</style>
+<noscript><style>html.wartet body{visibility:visible}[data-a]{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<header class="leiste"><img src="dateien/rudi-san-wort-fuer-dunkel.svg" width="544" height="128" alt="RUDI SAN Fine Dining"><a class="zur" href="../werkbank/index.html#markenbuch">Zur Werkbank</a></header>
+<section class="at d" id="oben">
+  <div class="in at__in">
+    <div>
+      <p class="kw">Markenbuch · Rudolf Napieraj</p>
+      <h1 class="ti">RUDI SAN <span>Fine Dining</span></h1>
+      <p class="lead">Logo, Farben, Schrift und Bilder der Marke von Rudolf Napieraj, Private Chef und Eventkoch, und wie sie auf Papier, Kleidung und Instagram zusammen aussehen. Jede Logo-Datei liegt zum Herunterladen bereit.</p>
+      <ul><li><a href="#logo">Logo</a></li><li><a href="#farben">Farben</a></li><li><a href="#schrift">Schrift</a></li><li><a href="#bildsprache">Bildsprache</a></li><li><a href="#anwendung">Anwendung</a></li></ul>
+    </div>
+    <div class="at__b"><figure><img src="img/portrait.webp" width="900" height="1125" alt="" decoding="sync" data-erst></figure><figure><img src="img/teller5.webp" width="600" height="750" alt="" decoding="sync" data-erst></figure><figure><img src="img/pass.webp" width="600" height="750" alt="" decoding="sync" data-erst></figure></div>
+  </div>
+</section>
+<section class="ab" id="logo">
+  <div class="in">
+    <header class="kopf" data-a><div><p class="kw">01 · Logo</p><h2 class="ti">Das Logo</h2></div>
+      <p>Der Kräuterzweig über der Wortmarke RUDI SAN, darunter FINE DINING, bündig unter dem R. Zweig und Wortmarke gibt es auch einzeln. Jede Fassung als PNG mit durchsichtigem Grund, als PDF und als SVG für Druckerei und Stickerei.</p></header>
+    <div class="tafeln"><figure class="tf " data-a><div class="tf__f" style="background:#121110"><img class="lg" src="dateien/rudi-san-kombi-fuer-dunkel.svg" width="544" height="310" alt="RUDI SAN Fine Dining"></div><figcaption><b>Logo auf Dunkel</b><span>Die Hauptfassung: Zweig in Gold, RUDI SAN in Creme, FINE DINING in Gold. So steht es auf der Micropage und vorn auf der Visitenkarte.</span><div class="dls"><a class="dl" href="dateien/rudi-san-kombi-fuer-dunkel.png" download>PNG</a><a class="dl" href="dateien/rudi-san-kombi-fuer-dunkel.pdf" download>PDF</a><a class="dl" href="dateien/rudi-san-kombi-fuer-dunkel.svg" download>SVG</a></div></figcaption></figure><figure class="tf " data-a><div class="tf__f" style="background:#e8dfcf"><img class="lg" src="dateien/rudi-san-kombi-fuer-hell.svg" width="544" height="310" alt="RUDI SAN Fine Dining"></div><figcaption><b>Logo auf Hell</b><span>Für Briefbogen, Angebot, Menükarte auf Creme und alles, was auf hellem Papier steht.</span><div class="dls"><a class="dl" href="dateien/rudi-san-kombi-fuer-hell.png" download>PNG</a><a class="dl" href="dateien/rudi-san-kombi-fuer-hell.pdf" download>PDF</a><a class="dl" href="dateien/rudi-san-kombi-fuer-hell.svg" download>SVG</a></div></figcaption></figure><figure class="tf " data-a><div class="tf__f" style="background:#121110"><img class="lg lg--z" src="dateien/rudi-san-zeichen-gold.svg" width="52" height="109" alt="RUDI SAN Fine Dining"></div><figcaption><b>Nur der Zweig</b><span>Für kleine Flächen: Profilbild, Favicon, Siegel, die Folgeseite des Briefbogens.</span><div class="dls"><a class="dl" href="dateien/rudi-san-zeichen-gold.png" download>PNG</a><a class="dl" href="dateien/rudi-san-zeichen-gold.pdf" download>PDF</a><a class="dl" href="dateien/rudi-san-zeichen-gold.svg" download>SVG</a></div></figcaption></figure><figure class="tf " data-a><div class="tf__f" style="background:#ffffff"><img class="lg lg--w" src="dateien/rudi-san-wort-fuer-hell.svg" width="544" height="128" alt="RUDI SAN Fine Dining"></div><figcaption><b>Nur die Wortmarke</b><span>Wenn der Platz breit und niedrig ist: Kopfleisten, Banderole, ovaler Sticker.</span><div class="dls"><a class="dl" href="dateien/rudi-san-wort-fuer-hell.png" download>PNG</a><a class="dl" href="dateien/rudi-san-wort-fuer-hell.pdf" download>PDF</a><a class="dl" href="dateien/rudi-san-wort-fuer-hell.svg" download>SVG</a></div></figcaption></figure><figure class="tf tf--hell" data-a><div class="tf__f" style="background:#ffffff"><div class="schutz"><div class="schutz__r"><img style="width:100%;height:auto;display:block" src="dateien/rudi-san-kombi-fuer-hell.svg" width="544" height="310" alt="RUDI SAN Fine Dining"></div><i class="sz sz--o"></i><i class="sz sz--u"></i><i class="sz sz--l"></i><i class="sz sz--r"></i></div></div><figcaption><b>Schutzzone</b><span>Rund um das Logo bleibt so viel frei, wie das R von RUDI SAN hoch ist. In diesem Abstand steht kein anderer Text und keine Kante.</span></figcaption></figure><figure class="tf tf--hell" data-a><div class="tf__f" style="background:#ffffff"><div class="klein"><div><span style="width:120px"><img style="width:120px;height:auto;display:block" src="dateien/rudi-san-kombi-fuer-hell.svg" width="544" height="310" alt="RUDI SAN Fine Dining"></span><b>Logo 30 mm · 120 px</b></div><div><span style="width:100px"><img style="width:100px;height:auto;display:block" src="dateien/rudi-san-wort-fuer-hell.svg" width="544" height="128" alt="RUDI SAN Fine Dining"></span><b>Wortmarke 25 mm · 100 px</b></div><div><span style="width:14px"><img style="width:14px;height:auto;display:block" src="dateien/rudi-san-zeichen-gold.svg" width="52" height="109" alt="RUDI SAN Fine Dining"></span><b>Zweig 6 mm · 24 px hoch</b></div></div></div><figcaption><b>Kleinste Grösse</b><span>Kleiner wird das Logo nicht gesetzt, sonst ist FINE DINING nicht mehr lesbar. Darunter steht der Zweig allein.</span></figcaption></figure><figure class="tf " data-a><div class="tf__f" style="background:#ffffff"><img class="lg" src="dateien/rudi-san-kombi-schwarz.svg" width="544" height="310" alt="RUDI SAN Fine Dining"></div><figcaption><b>Einfarbig Schwarz</b><span>Für Stempel, Gravur, Schwarzweissdruck und die Stickerei in einer Farbe.</span><div class="dls"><a class="dl" href="dateien/rudi-san-kombi-schwarz.png" download>PNG</a><a class="dl" href="dateien/rudi-san-kombi-schwarz.pdf" download>PDF</a><a class="dl" href="dateien/rudi-san-kombi-schwarz.svg" download>SVG</a></div></figcaption></figure><figure class="tf " data-a><div class="tf__f" style="background:#9c7c4f"><img class="lg" src="dateien/rudi-san-kombi-weiss.svg" width="544" height="310" alt="RUDI SAN Fine Dining"></div><figcaption><b>Einfarbig Weiss</b><span>Auf Fotos und farbigen Flächen, wenn Gold und Creme nicht genug Abstand zum Grund haben.</span><div class="dls"><a class="dl" href="dateien/rudi-san-kombi-weiss.png" download>PNG</a><a class="dl" href="dateien/rudi-san-kombi-weiss.pdf" download>PDF</a><a class="dl" href="dateien/rudi-san-kombi-weiss.svg" download>SVG</a></div></figcaption></figure></div>
+  </div>
+</section>
+<section class="ab d" id="farben">
+  <div class="in">
+    <header class="kopf" data-a><div><p class="kw">02 · Farben</p><h2 class="ti">Farben</h2></div>
+      <p>Dunkles Anthrazit und Schwarz als Grund, Gold und Champagner als Akzent, Creme als helle Fläche. So stand es im Briefing, so steht es auf der Micropage.</p></header>
+    <div class="farben"><div class="fa" data-a><div class="fa__f" style="background:#121110;color:#efe8db"><b>Nacht</b></div><dl><dt>HEX</dt><dd>#121110</dd><dt>RGB</dt><dd>18, 17, 16</dd></dl><p>Grund der Micropage, Visitenkarte vorn, Sticker, Stories.</p></div><div class="fa" data-a><div class="fa__f" style="background:#1b1a18;color:#efe8db"><b>Anthrazit</b></div><dl><dt>HEX</dt><dd>#1B1A18</dd><dt>RGB</dt><dd>27, 26, 24</dd></dl><p>Flächen auf Nacht, Rückseite der Visitenkarte, Schürze.</p></div><div class="fa" data-a><div class="fa__f" style="background:#c8a46a;color:#121110"><b>Gold</b></div><dl><dt>HEX</dt><dd>#C8A46A</dd><dt>RGB</dt><dd>200, 164, 106</dd></dl><p>Der Zweig und FINE DINING im Logo.</p></div><div class="fa" data-a><div class="fa__f" style="background:#c8ab7c;color:#121110"><b>Champagner</b></div><dl><dt>HEX</dt><dd>#C8AB7C</dd><dt>RGB</dt><dd>200, 171, 124</dd></dl><p>Akzente, Linien, der eckige Sticker, Garn der Stickerei.</p></div><div class="fa" data-a><div class="fa__f" style="background:#f2ece1;color:#1a1816"><b>Creme</b></div><dl><dt>HEX</dt><dd>#F2ECE1</dd><dt>RGB</dt><dd>242, 236, 225</dd></dl><p>Heller Grund: Menükarte, Visitenkarte hinten, Mappe.</p></div><div class="fa" data-a><div class="fa__f" style="background:#e8dfcf;color:#1a1816"><b>Creme tief</b></div><dl><dt>HEX</dt><dd>#E8DFCF</dd><dt>RGB</dt><dd>232, 223, 207</dd></dl><p>Tafeln und Linien auf Creme.</p></div></div>
+    <p class="quelle">Aus dem Briefing: «dunkles Anthrazit/Schwarz, Champagner- bzw. warme Goldakzente und Cremeweiß».</p>
+  </div>
+</section>
+<section class="ab" id="schrift">
+  <div class="in">
+    <header class="kopf" data-a><div><p class="kw">03 · Schrift</p><h2 class="ti">Schrift</h2></div>
+      <p>Eine Schrift für alles: Archivo, frei nutzbar unter der Open Font License. Breit und in Grossbuchstaben für Titel, gesperrt für kleine Zeilen, normal für den Text.</p></header>
+    <div class="schrift">
+      <div class="sp sp--gross" data-a><span class="muster">Archivo</span><span class="abc">ABCDEFGHIJKLMNOPQRSTUVWXYZ ÄÖÜ 0123456789 · & @</span></div>
+      <div class="sp" data-a><p class="name">Titel</p><p class="probe1">Private Dining</p><p class="wert">Archivo Light 300 · Breite 125 % · Grossbuchstaben</p></div>
+      <div class="sp" data-a><p class="name">Kleine Zeilen</p><p class="probe2">Exklusive Events</p><p class="wert">Archivo Medium 500 · Laufweite 0,3 em · Grossbuchstaben</p></div>
+      <div class="sp" data-a><p class="name">Text</p><p class="probe3">Moderne europäische Küche und Fine Dining, für private, geschäftliche und exklusive Veranstaltungen.</p><p class="wert">Archivo Light 300 · normale Breite</p></div>
+    </div>
+  </div>
+</section>
+<section class="ab d" id="bildsprache">
+  <div class="in">
+    <header class="kopf" data-a><div><p class="kw">04 · Bildsprache</p><h2 class="ti">Bilder</h2></div>
+      <p>Nur Rudis eigene Aufnahmen, so wie das Briefing es wünscht: Portrait, Gerichte, Arbeitssituationen und Events. Warmes Licht, dunkler Grund, Teller nah von der Seite oder von oben, Rudi am Pass und am Tisch der Gäste.</p></header>
+    <div class="bs"><div class="bs__g" data-a><p class="kw">Portrait</p><figure><img src="img/portrait.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure><figure><img src="img/auftakt.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure><figure><img src="img/servieren.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure></div><div class="bs__g" data-a><p class="kw">Gerichte</p><figure><img src="img/teller5.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure><figure><img src="img/teller7.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure><figure><img src="img/teller2.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure></div><div class="bs__g" data-a><p class="kw">Bei der Arbeit</p><figure><img src="img/pass.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure><figure><img src="img/spritzbeutel.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure><figure><img src="img/stationen.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure></div><div class="bs__g" data-a><p class="kw">Events</p><figure><img src="img/events.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure><figure><img src="img/private.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure><figure><img src="img/kerzen.webp" width="800" height="1000" alt="" loading="lazy" decoding="async"></figure></div></div>
+  </div>
+</section>
+<section class="ab" id="anwendung">
+  <div class="in">
+    <header class="kopf" data-a><div><p class="kw">05 · Anwendung</p><h2 class="ti">Im Einsatz</h2></div>
+      <p>So sieht die Marke auf den Stücken aus, die Rudi für den Aufbau braucht. Jede Kachel öffnet die Seite mit allen Fassungen und den Dateien.</p></header>
+    <div class="anw"><a class="an" href="../beigaben/drucksachen/index.html" data-a><span class="an__b"><img src="img/an-visitenkarte-vorn.webp" width="966" height="627" alt="" loading="lazy" decoding="async"></span><span class="an__t"><b>Visitenkarte</b><span>Vorn das Logo, hinten Kontakt und Code.</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></i></span></a><a class="an" href="../beigaben/event/index.html" data-a><span class="an__b"><img src="img/an-menuekarte-dunkel.webp" width="663" height="1400" alt="" loading="lazy" decoding="async"></span><span class="an__t"><b>Menükarte</b><span>Fünf Gänge als Platzhalter, hell und dunkel.</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></i></span></a><a class="an" href="../beigaben/sticker/index.html" data-a><span class="an__b"><img src="img/an-sticker-rund.webp" width="570" height="570" alt="" loading="lazy" decoding="async"></span><span class="an__t"><b>Sticker</b><span>Rund, oval und eckig.</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></i></span></a><a class="an" href="../beigaben/stickerei/index.html" data-a><span class="an__b"><img src="img/an-stickerei-kochjacke.webp" width="1400" height="990" alt="" loading="lazy" decoding="async"></span><span class="an__t"><b>Kochjacke</b><span>Zweig und RUDI SAN auf der linken Brust.</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></i></span></a><a class="an" href="../beigaben/mappen/index.html" data-a><span class="an__b"><img src="img/an-vorstellungsmappe-seite.webp" width="989" height="1400" alt="" loading="lazy" decoding="async"></span><span class="an__t"><b>Vorstellungsmappe</b><span>Alles aus dem Briefing auf einer Seite.</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></i></span></a><a class="an" href="../beigaben/online/index.html" data-a><span class="an__b"><img src="img/an-beitraege-leistungen.webp" width="1080" height="1350" alt="" loading="lazy" decoding="async"></span><span class="an__t"><b>Instagram</b><span>Profilbild, Highlights, Beiträge und Stories.</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></i></span></a></div>
+  </div>
+</section>
+<footer class="fu d"><div class="in"><img src="dateien/rudi-san-kombi-fuer-dunkel.svg" width="544" height="310" alt="RUDI SAN Fine Dining"><p>Markenbuch für Rudolf Napieraj · ein Entwurf von Tasty Studios, November 2026</p>
+  <a class="zur" href="../werkbank/index.html"><span>Zur Werkbank</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></i></a></div></footer>
+<script>
+(function(){var d=document.documentElement,f=0;function zeig(){if(f)return;f=1;d.classList.remove('wartet')}
+var w=[].slice.call(document.querySelectorAll('img[data-erst]')).map(function(i){return i.complete?0:new Promise(function(r){i.onload=i.onerror=r})});
+if(document.fonts)w.push(document.fonts.ready);Promise.all(w).then(zeig);setTimeout(zeig,2600);
+var z=[].slice.call(document.querySelectorAll('[data-a]'));if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){z.forEach(function(x){x.classList.add('da')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){io.unobserve(x.target);x.target.classList.add('da')}})},{rootMargin:'0px 0px -6% 0px'});z.forEach(function(x){io.observe(x)});
+addEventListener('pageshow',function(ev){if(ev.persisted)z.forEach(function(x){x.classList.add('da')})});})();
+</script>
+<script src="besuch.js?v=1794976032" defer></script>
+</body>
+</html>
