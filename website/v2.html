@@ -128,11 +128,11 @@ h1,h2,h3,.gross{font-family:var(--schrift);font-weight:300;font-style:normal;fon
 .auftakt-text{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(92px,11vh,150px) clamp(24px,3.6vw,64px) clamp(40px,6vh,64px) var(--rand)}
 .auftakt-text .unten{display:flex;flex-direction:column}
 .auftakt .vor{color:var(--champagner)}
-.auftakt h1{font-size:clamp(64px,min(10.4vw,13vh),166px);line-height:.9;font-weight:250;margin:22px 0 0;color:var(--hell)}
+.auftakt h1{font-size:clamp(64px,min(10.4vw,13vh),166px);line-height:.9;font-weight:250;margin:clamp(10px,1.6vh,22px) 0 0;color:var(--hell)}
 .auftakt .rolle{margin-top:0;color:var(--hell)}
 .auftakt .rolle i{font-style:normal;color:var(--champagner);padding:0 .45em}
 .auftakt p.satz{margin-top:22px;font-size:clamp(19px,1.4vw,22px);line-height:1.6;max-width:28em;color:#d9d1c3}
-.auftakt .knopf{margin-top:clamp(40px,6vh,64px);align-self:flex-start}
+.auftakt .knopf{margin-top:clamp(28px,4.5vh,64px);align-self:flex-start}
 .wand{display:grid;grid-template-columns:3fr 2fr;grid-template-rows:1fr 1fr;gap:var(--fuge);padding:72px var(--fuge) clamp(40px,6vh,64px) 0}
 .wand .foto:first-child{grid-row:1 / 3;border-radius:0 0 0 0}
 .wand .foto:nth-child(2){border-top-right-radius:calc(var(--ecke) - 10px)}
@@ -254,10 +254,19 @@ h1,h2,h3,.gross{font-family:var(--schrift);font-weight:300;font-style:normal;fon
 @media (prefers-reduced-motion:reduce){
   .auf,.zl .z>span,.foto img{transform:none!important;transition:none!important}
 }
+
+/* Siegel seit 19.11.2026 (Fassung 75, Rudis Wahl): Ring mit RUDI SAN und PRIVATE CHEF, in der Mitte R, Zweig, S */
+.siegel-gross{display:block;width:clamp(64px,8vh,112px);height:clamp(64px,8vh,112px);margin-bottom:clamp(14px,2.4vh,24px);overflow:visible;--sg-fg:var(--hell);--sg-gold:var(--champagner)}
+.siegel-kontakt{display:block;width:118px;height:118px;margin-bottom:26px;overflow:visible;--sg-fg:var(--dunkel);--sg-gold:var(--gold-tief)}
+.marke svg.mono{width:34px;height:27px;overflow:visible;--sg-fg:currentColor;--sg-gold:var(--champagner)}
+.fuss .marke svg.mono{--sg-gold:var(--gold-tief)}
+.rs-knopf svg.mono{width:34px;height:27px;overflow:visible;--sg-fg:var(--hell);--sg-gold:var(--champagner)}
+.rs-marke svg.mono{width:22px;height:17px;overflow:visible;--sg-fg:currentColor;--sg-gold:var(--champagner)}
+@media (max-width:860px){.siegel-gross{width:78px;height:78px;margin-bottom:14px}.siegel-kontakt{width:96px;height:96px}}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="zweig" viewBox="-26 -57 52 109"><g fill="currentColor"><path d="M0,50 C0,20 3,-10 0,-48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M0,30 C-10,26 -20,16 -22,8 C-12,8 -4,18 0,30 Z"/><path d="M0,18 C10,14 20,4 22,-4 C12,-4 4,6 0,18 Z"/><path d="M0,4 C-10,0 -20,-10 -22,-18 C-12,-18 -4,-8 0,4 Z"/><path d="M0,-8 C10,-12 20,-22 22,-30 C12,-30 4,-20 0,-8 Z"/><path d="M0,-20 C-10,-24 -20,-34 -22,-42 C-12,-42 -4,-32 0,-20 Z"/><path d="M0,-30 C-6,-38 -4,-48 0,-54 C4,-48 6,-38 0,-30 Z"/></g></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="zweig" viewBox="-26 -57 52 109"><g fill="currentColor"><path d="M0,50 C0,20 3,-10 0,-48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M0,30 C-10,26 -20,16 -22,8 C-12,8 -4,18 0,30 Z"/><path d="M0,18 C10,14 20,4 22,-4 C12,-4 4,6 0,18 Z"/><path d="M0,4 C-10,0 -20,-10 -22,-18 C-12,-18 -4,-8 0,4 Z"/><path d="M0,-8 C10,-12 20,-22 22,-30 C12,-30 4,-20 0,-8 Z"/><path d="M0,-20 C-10,-24 -20,-34 -22,-42 C-12,-42 -4,-32 0,-20 Z"/><path d="M0,-30 C-6,-38 -4,-48 0,-54 C4,-48 6,-38 0,-30 Z"/></g></symbol><symbol id="siegel" viewBox="-72 -72 144 144" overflow="visible"><circle r="64" fill="none" stroke="var(--sg-gold,#c8ab7c)" stroke-width="1"/><defs><path id="mpo1" d="M-52,0 A52,52 0 0 1 52,0"/><path id="mpu1" d="M-58,0 A58,58 0 0 0 58,0"/></defs><text font-size="10" fill="var(--sg-gold,#c8ab7c)" text-anchor="middle" style="font-family:Archivo;font-weight:500;letter-spacing:.32em"><textPath href="#mpo1" startOffset="50%">RUDI SAN</textPath></text><text font-size="7.5" fill="var(--sg-gold,#c8ab7c)" text-anchor="middle" style="font-family:Archivo;font-weight:500;letter-spacing:.32em"><textPath href="#mpu1" startOffset="50%">PRIVATE CHEF</textPath></text><text x="-36.27" y="10.29" font-size="30" fill="var(--sg-fg,#efe8db)" style="font-family:Archivo;font-weight:300;font-stretch:125%">R</text><g fill="var(--sg-gold,#c8ab7c)" color="var(--sg-gold,#c8ab7c)" transform="translate(0 1.19) scale(0.4771)"><path d="M0,50 C0,20 3,-10 0,-48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M0,30 C-10,26 -20,16 -22,8 C-12,8 -4,18 0,30 Z"/><path d="M0,18 C10,14 20,4 22,-4 C12,-4 4,6 0,18 Z"/><path d="M0,4 C-10,0 -20,-10 -22,-18 C-12,-18 -4,-8 0,4 Z"/><path d="M0,-8 C10,-12 20,-22 22,-30 C12,-30 4,-20 0,-8 Z"/><path d="M0,-20 C-10,-24 -20,-34 -22,-42 C-12,-42 -4,-32 0,-20 Z"/><path d="M0,-30 C-6,-38 -4,-48 0,-54 C4,-48 6,-38 0,-30 Z"/></g><text x="9.28" y="10.29" font-size="30" fill="var(--sg-fg,#efe8db)" style="font-family:Archivo;font-weight:300;font-stretch:125%">S</text></symbol><symbol id="mono" viewBox="-38 -30 76 60" overflow="visible"><text x="-36.27" y="10.29" font-size="30" fill="var(--sg-fg,#efe8db)" style="font-family:Archivo;font-weight:300;font-stretch:125%">R</text><g fill="var(--sg-gold,#c8ab7c)" color="var(--sg-gold,#c8ab7c)" transform="translate(0 1.19) scale(0.4771)"><path d="M0,50 C0,20 3,-10 0,-48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M0,30 C-10,26 -20,16 -22,8 C-12,8 -4,18 0,30 Z"/><path d="M0,18 C10,14 20,4 22,-4 C12,-4 4,6 0,18 Z"/><path d="M0,4 C-10,0 -20,-10 -22,-18 C-12,-18 -4,-8 0,4 Z"/><path d="M0,-8 C10,-12 20,-22 22,-30 C12,-30 4,-20 0,-8 Z"/><path d="M0,-20 C-10,-24 -20,-34 -22,-42 C-12,-42 -4,-32 0,-20 Z"/><path d="M0,-30 C-6,-38 -4,-48 0,-54 C4,-48 6,-38 0,-30 Z"/></g><text x="9.28" y="10.29" font-size="30" fill="var(--sg-fg,#efe8db)" style="font-family:Archivo;font-weight:300;font-stretch:125%">S</text></symbol></svg>
 
 <header class="leiste" id="leiste">
   <nav class="leiste-nav" aria-label="Abschnitte"><a href="#ich">Über mich</a><a href="#stationen">Stationen</a><a href="#kueche">Küche</a><a href="#leistungen">Leistungen</a></nav>
@@ -269,7 +278,7 @@ h1,h2,h3,.gross{font-family:var(--schrift);font-weight:300;font-style:normal;fon
 <section class="auftakt" id="start">
   <div class="auftakt-text tapete-dunkel">
     <div class="oben">
-    <svg class="zweig-gross auf" style="--i:0" aria-hidden="true"><use href="#zweig"/></svg>
+    <svg class="siegel-gross auf" style="--i:0" aria-hidden="true"><use href="#siegel"/></svg>
     <p class="klein vor auf" style="--i:0">Rudolf Napieraj</p>
     <h1 class="zl" aria-label="RUDI SAN"><span class="z"><span style="--i:1">RUDI</span></span><span class="z"><span style="--i:2">SAN</span></span></h1>
     </div>
@@ -365,7 +374,7 @@ h1,h2,h3,.gross{font-family:var(--schrift);font-weight:300;font-style:normal;fon
   <div class="innen">
     <div class="ko-raster">
       <div>
-        <svg class="zweig-kontakt auf" data-auf aria-hidden="true"><use href="#zweig"/></svg>
+        <svg class="siegel-kontakt auf" data-auf aria-hidden="true"><use href="#siegel"/></svg>
         <p class="wort gross zl" data-auf aria-label="RUDI SAN"><span class="z"><span style="--i:0">RUDI</span></span><span class="z"><span style="--i:1">SAN</span></span></p>
         <p class="klein rolle auf" data-auf style="--i:1">Rudolf Napieraj · Anfrage</p>
         <ul class="ko-liste">
@@ -382,7 +391,7 @@ h1,h2,h3,.gross{font-family:var(--schrift);font-weight:300;font-style:normal;fon
       </div>
     </div>
     <footer class="fuss">
-      <span class="marke"><svg aria-hidden="true"><use href="#zweig"/></svg>RUDI SAN</span>
+      <span class="marke"><svg class="mono" aria-hidden="true"><use href="#mono"/></svg>RUDI SAN</span>
       <span class="fuss-rechts"><span class="fuss-text">Rudolf Napieraj · Private Chef · Event Chef · Fine Dining</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span>
     </footer>
   </div>
@@ -434,11 +443,11 @@ h1,h2,h3,.gross{font-family:var(--schrift);font-weight:300;font-style:normal;fon
   },{passive:true});
 })();
 </script>
-<button class="rs-knopf" id="rs-knopf" type="button" aria-label="Rudi schreiben" aria-expanded="false" aria-controls="rs-fenster"><svg aria-hidden="true"><use href="#zweig"/></svg></button>
+<button class="rs-knopf" id="rs-knopf" type="button" aria-label="Rudi schreiben" aria-expanded="false" aria-controls="rs-fenster"><svg class="mono" aria-hidden="true"><use href="#mono"/></svg></button>
 <div class="rs-fenster" id="rs-fenster" role="dialog" aria-label="Rudi schreiben" aria-hidden="true">
   <div class="rs-bilder"><img src="assets/bild/pass-800.webp" alt=""><img src="assets/bild/teller5-800.webp" alt=""><img src="assets/bild/loeffel-800.webp" alt=""></div>
   <div class="rs-kopf">
-    <div><span class="rs-marke">RUDI SAN<svg aria-hidden="true"><use href="#zweig"/></svg></span><strong>Schreiben Sie mir direkt.</strong></div>
+    <div><span class="rs-marke">RUDI SAN<svg class="mono" aria-hidden="true"><use href="#mono"/></svg></span><strong>Schreiben Sie mir direkt.</strong></div>
     <button type="button" class="rs-zu" aria-label="Fenster schließen">×</button>
   </div>
   <div class="rs-inhalt">
@@ -523,6 +532,6 @@ h1,h2,h3,.gross{font-family:var(--schrift);font-weight:300;font-style:normal;fon
   bauen();
 })();
 </script>
-<script src="besuch.js?v=1794993024" defer></script>
+<script src="besuch.js?v=1795076769" defer></script>
 </body>
 </html>

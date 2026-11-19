@@ -384,3 +384,7 @@ html.auf .at__k,html.auf .at__h,html.auf .at__r{transform:none;opacity:1}
 .sl.nacht{background-image:none}
 .sl__h{font-size:clamp(34px,4vw,62px)}
 .pk--ohne .bogenb img,.pk--ohne .bogenb img.frei{filter:none!important;box-shadow:none!important}   /* Sticker ohne Schatten (Robert 18.11.2026) */
+/* Siegel seit 19.11.2026: Monogramm R Zweig S statt des Zweigs in Köpfen und Etiketten */
+.kopf__z{width:46px}
+.at__k img{width:30px}
+.wz__wann img{width:22px}
